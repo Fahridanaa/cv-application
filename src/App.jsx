@@ -1,11 +1,23 @@
-import { useState } from 'react';
-import './App.css';
+import Resume from './components/Resume';
+import TextInput from './components/Form/TextInput';
+import './styles/App.css';
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
-		
+		<div id="App">
+			<div id="edit-side">
+				<div id="personal-info">
+					<h1>Personal Info</h1>
+					<TextInput customLabel="Name" isRecommended />
+					<TextInput customLabel="Address" />
+					<TextInput customLabel="Phone" />
+					<TextInput customLabel="Email" />
+				</div>
+				<div id="education"></div>
+				<div id="experience"></div>
+			</div>
+			<Resume></Resume>
+		</div>
 	);
 }
 
