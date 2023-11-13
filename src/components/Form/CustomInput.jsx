@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
-import '../../styles/TextInput.css';
+import '../../styles/CustomInput.css';
 
 export default function CustomInput({
 	value,
 	inputType,
 	customLabel,
 	isRecommended,
-	inputHandler,
+	onChange,
 }) {
 	return (
 		<div id={customLabel}>
@@ -17,7 +17,7 @@ export default function CustomInput({
 			<input
 				type={{ inputType }}
 				value={value}
-				onChange={(event) => inputHandler(event.target.value)}
+				onChange={onChange}
 				{...(isRecommended && { required: true })}
 			/>
 		</div>

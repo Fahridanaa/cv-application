@@ -1,47 +1,61 @@
-// import Resume from './components/Resume';
+import Resume from './components/Resume';
 import CustomInput from './components/Form/CustomInput';
+import Header from './components/Form/HeaderInput';
 import './styles/App.css';
 import { useState } from 'react';
 
 function App() {
-	const [name, setName] = useState('');
+	function useFormInput(initialValue) {
+		const [value, setValue] = useState(initialValue);
+		const handleChange = (event) => setValue(event.target.value);
 
-	function setNameHandler(value) {
-		setName(value);
+		return {
+			value,
+			onChange: handleChange,
+		};
 	}
+
+	const name = useFormInput('');
+	const address = useFormInput('');
+	const phone = useFormInput('');
+	const email = useFormInput('');
 
 	return (
 		<div id="App">
 			<div id="edit-side">
 				<div id="personal-info">
-					<h1>Personal Info</h1>
-					<CustomInput
-						value={name}
-						inputType={{ type: 'text' }}
-						customLabel="Name"
-						isRecommended
-						inputHandler={setNameHandler}
-					/>
-					<CustomInput
-						inputType={{ type: 'text' }}
-						customLabel="Address"
-						isRecommended
-					/>
-					<CustomInput
-						inputType={{ type: 'tel' }}
-						customLabel="Phone"
-						isRecommended
-					/>
-					<CustomInput
-						inputType={{ type: 'email' }}
-						customLabel="Email"
-						isRecommended
-					/>
+					<form>
+						<Header title="Personal Info" id="personal-info-header" />
+						<div id="personal-info-input">
+							<CustomInput
+								inputType={{ type: 'text' }}
+								customLabel="Name"
+								isRecommended
+								{...name}
+							/>
+							<CustomInput
+								inputType={{ type: 'text' }}
+								customLabel="Address"
+								isRecommended
+								{...address}
+							/>
+							<CustomInput
+								inputType={{ type: 'tel' }}
+								customLabel="Phone"
+								isRecommended
+								{...phone}
+							/>
+							<CustomInput
+								inputType={{ type: 'email' }}
+								customLabel="Email"
+								isRecommended
+								{...email}
+							/>
+						</div>
+					</form>
 				</div>
-				<div id="education"></div>
-				<div id="experience"></div>
 			</div>
-			<h3>{name}</h3>
+			<Resume />
 		</div>
 	);
 }

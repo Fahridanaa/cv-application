@@ -1,0 +1,9 @@
+#personal-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#personal-info-header > img {
+  width: 5%;
+}

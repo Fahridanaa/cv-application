@@ -1,9 +1,27 @@
+#root {
+
+}
+
 #App {
   display: flex;
-  flex-direction: column;
+  padding: 16px;
+  gap: 64px;
 }
 
 #edit-side {
-  
+  width: 50vw;
+  box-shadow: 1px 1px 0px 1px #888888;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 16px;
 }
 
+#personal-info {
+  border: 1px solid black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
