@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import arrowDownIcon from '../../assets/chevron-down-outline.svg'; // with import
-import '../../styles/Header.css';
+import HeaderInputShowButton from './HeaderInputShowButton';
+import '../../styles/HeaderInput.css';
 
 function HeaderInput({ title, id }) {
 	const titleStyle = {};
@@ -8,14 +8,10 @@ function HeaderInput({ title, id }) {
 	return (
 		<div id={id}>
 			<h1 style={titleStyle}>{title}</h1>
-			<img src={arrowDownIcon} />
+			<HeaderInputShowButton />
 		</div>
 	);
 }
-
-HeaderInput.propTypes = {
-	title: PropTypes.string.isRequired,
-};
 
 export default HeaderInput;
 HeaderInput.propTypes = {

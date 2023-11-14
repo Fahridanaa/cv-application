@@ -1,0 +1,9 @@
+#personal-info-header > button > img {
+  width: fit-content;
+}
+
+#personal-info-header > button {
+  width: 5%;
+  border: none;
+  background-color: transparent;
+}

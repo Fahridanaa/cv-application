@@ -55,7 +55,6 @@ function App() {
 					</form>
 				</div>
 			</div>
-			<Resume />
 		</div>
 	);
 }

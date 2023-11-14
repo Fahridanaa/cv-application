@@ -14,12 +14,7 @@ export default function CustomInput({
 				{customLabel}
 				{isRecommended && <span> recommended</span>}
 			</label>
-			<input
-				type={{ inputType }}
-				value={value}
-				onChange={onChange}
-				{...(isRecommended && { required: true })}
-			/>
+			<input type={{ inputType }} value={value} onChange={onChange} />
 		</div>
 	);
 }
