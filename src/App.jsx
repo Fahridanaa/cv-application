@@ -55,6 +55,12 @@ function App() {
 					</form>
 				</div>
 			</div>
+			<Resume
+				name={name.value}
+				address={address.value}
+				phone={phone.value}
+				email={email.value}
+			/>
 		</div>
 	);
 }
