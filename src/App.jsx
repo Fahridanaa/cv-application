@@ -1,8 +1,9 @@
-import Resume from './components/Resume';
+import Resume from './components/Resume/Resume';
 import CustomInput from './components/Form/CustomInput';
 import Header from './components/Form/HeaderInput';
 import './styles/App.css';
 import { useState } from 'react';
+import ResumeHeader from './components/Resume/ResumeHeader';
 
 function App() {
 	function useFormInput(initialValue) {
@@ -24,43 +25,43 @@ function App() {
 		<div id="App">
 			<div id="edit-side">
 				<div id="personal-info">
-					<form>
-						<Header title="Personal Info" id="personal-info-header" />
-						<div id="personal-info-input">
-							<CustomInput
-								inputType={{ type: 'text' }}
-								customLabel="Name"
-								isRecommended
-								{...name}
-							/>
-							<CustomInput
-								inputType={{ type: 'text' }}
-								customLabel="Address"
-								isRecommended
-								{...address}
-							/>
-							<CustomInput
-								inputType={{ type: 'tel' }}
-								customLabel="Phone"
-								isRecommended
-								{...phone}
-							/>
-							<CustomInput
-								inputType={{ type: 'email' }}
-								customLabel="Email"
-								isRecommended
-								{...email}
-							/>
-						</div>
-					</form>
+					<Header title="Personal Info" id="personal-info-header" />
+					<div id="personal-info-input">
+						<CustomInput
+							inputType={{ type: 'text' }}
+							customLabel="Name"
+							isRecommended
+							{...name}
+						/>
+						<CustomInput
+							inputType={{ type: 'text' }}
+							customLabel="Address"
+							isRecommended
+							{...address}
+						/>
+						<CustomInput
+							inputType={{ type: 'tel' }}
+							customLabel="Phone"
+							isRecommended
+							{...phone}
+						/>
+						<CustomInput
+							inputType={{ type: 'email' }}
+							customLabel="Email"
+							isRecommended
+							{...email}
+						/>
+					</div>
 				</div>
 			</div>
-			<Resume
-				name={name.value}
-				address={address.value}
-				phone={phone.value}
-				email={email.value}
-			/>
+			<Resume>
+				<ResumeHeader
+					name={name.value}
+					address={address.value}
+					phone={phone.value}
+					email={email.value}
+				/>
+			</Resume>
 		</div>
 	);
 }
