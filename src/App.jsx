@@ -34,10 +34,10 @@ function App() {
 							{...name}
 						/>
 						<CustomInput
-							inputType={{ type: 'text' }}
-							customLabel="Address"
+							inputType={{ type: 'email' }}
+							customLabel="Email"
 							isRecommended
-							{...address}
+							{...email}
 						/>
 						<CustomInput
 							inputType={{ type: 'tel' }}
@@ -46,10 +46,10 @@ function App() {
 							{...phone}
 						/>
 						<CustomInput
-							inputType={{ type: 'email' }}
-							customLabel="Email"
+							inputType={{ type: 'text' }}
+							customLabel="Address"
 							isRecommended
-							{...email}
+							{...address}
 						/>
 					</div>
 				</div>
