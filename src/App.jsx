@@ -55,12 +55,17 @@ function App() {
 				</div>
 			</div>
 			<Resume>
-				<ResumeHeader
-					name={name.value}
-					address={address.value}
-					phone={phone.value}
-					email={email.value}
-				/>
+				{(name.value !== '' ||
+					address.value !== '' ||
+					phone.value !== '' ||
+					email.value !== '') && (
+					<ResumeHeader
+						name={name.value}
+						address={address.value}
+						phone={phone.value}
+						email={email.value}
+					/>
+				)}
 			</Resume>
 		</div>
 	);
