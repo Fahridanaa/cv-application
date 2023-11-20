@@ -17,6 +17,7 @@ function App() {
 	}
 	const [personalInfoActive, setPersonalInfoActive] = useState(false);
 	const [educationActive, setEducationActive] = useState(false);
+	const [experienceActive, setExperienceActive] = useState(false);
 
 	const handleTogglePersonalInfo = () => {
 		setPersonalInfoActive(!personalInfoActive);
@@ -24,6 +25,10 @@ function App() {
 
 	const handleToggleEducation = () => {
 		setEducationActive(!educationActive);
+	};
+
+	const handleToggleExperience = () => {
+		setExperienceActive(!experienceActive);
 	};
 
 	const name = useFormInput('');
@@ -82,6 +87,18 @@ function App() {
 					<div
 						id="education-input"
 						className={educationActive ? 'show' : ''}></div>
+				</div>
+				<div id="Experience" className="formInput">
+					<Header
+						className="formHeader"
+						title="Experience"
+						id="experience-header"
+						handleToggle={handleToggleExperience}
+						isActive={experienceActive}
+					/>
+					<div
+						id="experience-input"
+						className={experienceActive ? 'show' : ''}></div>
 				</div>
 			</div>
 			<Resume>
