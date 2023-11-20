@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import HeaderInputShowButton from './HeaderInputShowButton';
 import '../../styles/HeaderInput.css';
 
-function HeaderInput({ title, id, handleToggle, isActive }) {
+function HeaderInput({ className, title, id, handleToggle, isActive }) {
 	const titleStyle = {};
 
 	return (
-		<div id={id}>
+		<div id={id} className={className}>
 			<h1 style={titleStyle}>{title}</h1>
 			<HeaderInputShowButton onButtonClick={handleToggle} isActive={isActive} />
 		</div>

@@ -1,8 +1,8 @@
-#personal-info-header > button > img {
+#showButton > img {
   width: fit-content;
 }
 
-#personal-info-header > button {
+#showButton {
   width: 5%;
   border: none;
   background-color: transparent;
@@ -11,6 +11,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-#personal-info-header > button.active {
+#showButton.active {
   transform: rotate(0deg);
 }

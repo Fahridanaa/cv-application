@@ -15,9 +15,15 @@ function App() {
 			onChange: handleChange,
 		};
 	}
-	const [isActive, setIsActive] = useState(false);
-	const handleToggle = () => {
-		setIsActive(!isActive);
+	const [personalInfoActive, setPersonalInfoActive] = useState(false);
+	const [educationActive, setEducationActive] = useState(false);
+
+	const handleTogglePersonalInfo = () => {
+		setPersonalInfoActive(!personalInfoActive);
+	};
+
+	const handleToggleEducation = () => {
+		setEducationActive(!educationActive);
 	};
 
 	const name = useFormInput('');
@@ -28,16 +34,17 @@ function App() {
 	return (
 		<div id="App">
 			<div id="edit-side">
-				<div id="personal-info">
+				<div id="personal-info" className="formInput">
 					<Header
+						className="formHeader"
 						title="Personal Info"
 						id="personal-info-header"
-						handleToggle={handleToggle}
-						isActive={isActive}
+						handleToggle={handleTogglePersonalInfo}
+						isActive={personalInfoActive}
 					/>
 					<div
 						id="personal-info-input"
-						className={isActive ? 'show' : ''}>
+						className={personalInfoActive ? 'show' : ''}>
 						<CustomInput
 							inputType={{ type: 'text' }}
 							customLabel="Name"
@@ -63,6 +70,18 @@ function App() {
 							{...address}
 						/>
 					</div>
+				</div>
+				<div id="education" className="formInput">
+					<Header
+						className="formHeader"
+						title="Education"
+						id="education-header"
+						handleToggle={handleToggleEducation}
+						isActive={educationActive}
+					/>
+					<div
+						id="education-input"
+						className={educationActive ? 'show' : ''}></div>
 				</div>
 			</div>
 			<Resume>
