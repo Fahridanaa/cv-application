@@ -1,17 +1,13 @@
+/* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 import HeaderInputShowButton from './HeaderInputShowButton';
 import '../../styles/HeaderInput.css';
 
-function HeaderInput({ title, id }) {
-	const [isActive, setIsActive] = useState(false);
-	const handleToggle = () => {
-		setIsActive(!isActive);
-	};
+function HeaderInput({ title, id, handleToggle, isActive }) {
 	const titleStyle = {};
 
 	return (
-		<div id={id} className={`${isActive ? 'buttonActive' : ''}`}>
+		<div id={id}>
 			<h1 style={titleStyle}>{title}</h1>
 			<HeaderInputShowButton onButtonClick={handleToggle} isActive={isActive} />
 		</div>

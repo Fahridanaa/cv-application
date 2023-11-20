@@ -15,6 +15,10 @@ function App() {
 			onChange: handleChange,
 		};
 	}
+	const [isActive, setIsActive] = useState(false);
+	const handleToggle = () => {
+		setIsActive(!isActive);
+	};
 
 	const name = useFormInput('');
 	const address = useFormInput('');
@@ -25,8 +29,15 @@ function App() {
 		<div id="App">
 			<div id="edit-side">
 				<div id="personal-info">
-					<Header title="Personal Info" id="personal-info-header" />
-					<div id="personal-info-input">
+					<Header
+						title="Personal Info"
+						id="personal-info-header"
+						handleToggle={handleToggle}
+						isActive={isActive}
+					/>
+					<div
+						id="personal-info-input"
+						className={isActive ? 'show' : ''}>
 						<CustomInput
 							inputType={{ type: 'text' }}
 							customLabel="Name"

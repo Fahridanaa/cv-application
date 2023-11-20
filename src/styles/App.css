@@ -10,18 +10,19 @@
 
 #edit-side {
   width: 50vw;
-  box-shadow: 1px 1px 0px 1px #888888;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 16px;
 }
 
 #personal-info {
+  box-shadow: 1px 1px 0px 1px #888888;
   border: 1px solid black;
+  padding: 8px;
+  border-radius: 10px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+#personal-info-input {
+  display: none;
+}
+
+#personal-info-input.show {
+  display: block;
 }

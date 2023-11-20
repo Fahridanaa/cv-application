@@ -7,9 +7,10 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transform: rotate(90deg);
   transition: transform 0.3s ease-in-out;
 }
 
 #personal-info-header > button.active {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
