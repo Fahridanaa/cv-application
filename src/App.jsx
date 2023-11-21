@@ -4,6 +4,7 @@ import './styles/App.css';
 import { useState } from 'react';
 import ResumeHeader from './components/Resume/ResumeHeader';
 import CustomForm from './components/Form/CustomForm';
+import ResumeBody from './components/Resume/ResumeBody';
 
 function App() {
 	function useFormInput(initialValue) {
@@ -65,6 +66,7 @@ function App() {
 						email={email.value}
 					/>
 				)}
+				<ResumeBody />
 			</Resume>
 		</div>
 	);
