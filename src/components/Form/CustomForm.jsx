@@ -18,7 +18,9 @@ export default function CustomForm({ id, title, children }) {
 				handleToggle={handleToggle}
 				isActive={isActive}
 			/>
-			<div id={`${id}-input`} className={isActive ? 'show' : ''}>
+			<div
+				id={`${id}-input`}
+				className={'inputSection ' + (isActive ? 'show' : '')}>
 				{children}
 			</div>
 		</div>

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import ResumeHeader from './components/Resume/ResumeHeader';
 import CustomForm from './components/Form/CustomForm';
 import ResumeBody from './components/Resume/ResumeBody';
+import AddButton from './components/Form/AddButton';
 
 function App() {
 	function useFormInput(initialValue) {
@@ -51,7 +52,9 @@ function App() {
 						{...address}
 					/>
 				</CustomForm>
-				<CustomForm id="education" title="Education"></CustomForm>
+				<CustomForm id="education" title="Education">
+					<AddButton desc="Add Education" />`
+				</CustomForm>
 				<CustomForm id="experience" title="Experience"></CustomForm>
 			</div>
 			<Resume>

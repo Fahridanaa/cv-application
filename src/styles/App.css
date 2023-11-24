@@ -25,10 +25,10 @@
   background-color: #f5f5f5;
 }
 
-#personal-info-input {
+.inputSection {
   display: none;
 }
 
-#personal-info-input.show {
+.inputSection.show {
   display: block;
 }
