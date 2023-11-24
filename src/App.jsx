@@ -53,7 +53,7 @@ function App() {
 					/>
 				</CustomForm>
 				<CustomForm id="education" title="Education">
-					<AddButton desc="Add Education" />`
+					<AddButton desc="Add Education" />
 				</CustomForm>
 				<CustomForm id="experience" title="Experience"></CustomForm>
 			</div>
