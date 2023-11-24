@@ -12,6 +12,7 @@ export default function AddButton({ desc }) {
 				display: 'flex',
 				alignItems: 'center',
 				justifyContent: 'center',
+				cursor: 'pointer',
 			}}>
 			<img src={AddIcon} alt="Add Icon" style={{ width: '10%' }} />
 			<p>{desc}</p>

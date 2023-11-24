@@ -55,7 +55,9 @@ function App() {
 				<CustomForm id="education" title="Education">
 					<AddButton desc="Add Education" />
 				</CustomForm>
-				<CustomForm id="experience" title="Experience"></CustomForm>
+				<CustomForm id="experience" title="Experience">
+					<AddButton desc="Add Experience" />
+				</CustomForm>
 			</div>
 			<Resume>
 				{(name.value !== '' ||
