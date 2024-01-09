@@ -1,6 +1,4 @@
 /* eslint-disable react/prop-types */
-import '../../styles/CustomInput.css';
-
 export default function CustomInput({
 	value,
 	inputType,
@@ -9,12 +7,12 @@ export default function CustomInput({
 	onChange,
 }) {
 	return (
-		<div id={customLabel}>
-			<label>
+		<div id={customLabel} className="flex flex-col gap-1 m-2">
+			<label className="text-lg font-medium">
 				{customLabel}
-				{isRecommended && <span> recommended</span>}
+				{isRecommended && <span className="text-sm text-red-400 ml-2"> recommended</span>}
 			</label>
-			<input type={{ inputType }} value={value} onChange={onChange} />
+			<input type={ inputType.type } value={value} onChange={onChange} className="p-1 rounded-lg border border-[#ccc] text-lg"/>
 		</div>
 	);
 }

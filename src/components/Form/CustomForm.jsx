@@ -10,9 +10,9 @@ export default function CustomForm({ id, title, children }) {
 	};
 
 	return (
-		<div id={id} className="formInput">
+		<div id={id} className="drop-shadow-sm border border-black p-2 rounded-xl bg-[#f5f5f5] text-xl font-medium">
 			<Header
-				className="formHeader"
+				className="flex items-center justify-between"
 				title={title}
 				id={`${id}-header`}
 				handleToggle={handleToggle}
@@ -20,7 +20,7 @@ export default function CustomForm({ id, title, children }) {
 			/>
 			<div
 				id={`${id}-input`}
-				className={'inputSection ' + (isActive ? 'show' : '')}>
+				className={`${isActive ? 'flex flex-col' : 'hidden'}`}>
 				{children}
 			</div>
 		</div>

@@ -1,6 +1,5 @@
 import Resume from './components/Resume/Resume';
 import CustomInput from './components/Form/CustomInput';
-import './styles/App.css';
 import { useState } from 'react';
 import ResumeHeader from './components/Resume/ResumeHeader';
 import CustomForm from './components/Form/CustomForm';
@@ -24,8 +23,8 @@ function App() {
 	const email = useFormInput('');
 
 	return (
-		<div id="App">
-			<div id="edit-side">
+		<div id="App" className="flex p-4 gap-16">
+			<div id="edit-side" className="w-[50vw] flex flex-col gap-4">
 				<CustomForm id="personal-info" title="Personal Info">
 					<CustomInput
 						inputType={{ type: 'text' }}
