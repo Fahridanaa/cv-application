@@ -4,17 +4,8 @@ import AddIcon from '../../assets/add-circle-outline.svg';
 export default function AddButton({ desc }) {
 	return (
 		<button
-			className="add-button"
-			style={{
-				width: '30%',
-				borderRadius: '15px',
-				margin: '10px auto',
-				display: 'flex',
-				alignItems: 'center',
-				justifyContent: 'center',
-				cursor: 'pointer',
-			}}>
-			<img src={AddIcon} alt="Add Icon" style={{ width: '10%' }} />
+			className="w-1/4 rounded-xl flex items-center justify-center cursor-pointer border border-black self-center">
+			<img src={AddIcon} alt="Add Icon" className="w-[10%]"/>
 			<p>{desc}</p>
 		</button>
 	);
