@@ -4,7 +4,7 @@ import phoneIcon from '../../assets/call-outline.svg';
 
 const attStyle = {
 	display: 'flex',
-	flexDirection: 'row',
+	gap: '4px',
 	alignItems: 'center',
 	justifyContent: 'flex-start',
 	padding: '0',
@@ -26,7 +26,7 @@ export default function ResumeHeader({ name, address, phone, email }) {
 	return (
 		<div id="resume-header" className="flex justify-center items-center flex-col bg-[#6bbfef] text-black p-4 gap-4">
 			{name && <h1 id="resume-name" className="text-4xl m-0 text-center">{name}</h1>}
-			<div id="resume-contact" className="flex justify-center gap-8 flex-wrap">
+			<div id="resume-contact" className="flex justify-center gap-2 flex-wrap">
 				{email && (
 					<div id="resume-email" style={attStyle}>
 						<img src={mailIcon} style={iconStyle} />
