@@ -5,6 +5,8 @@ import ResumeHeader from './components/Resume/ResumeHeader';
 import CustomForm from './components/Form/CustomForm';
 import ResumeBody from './components/Resume/ResumeBody';
 import AddButton from './components/Form/AddButton';
+import EducationalForm from "./components/Form/EducationalForm.jsx";
+import ExperienceForm from "./components/Form/ExperienceForm.jsx";
 
 function App() {
 	function useFormInput(initialValue) {
@@ -16,6 +18,9 @@ function App() {
 			onChange: handleChange,
 		};
 	}
+
+	const [educationCount, setEducationCount] = useState(0);
+	const [experienceCount, setExperienceCount] = useState(0);
 
 	const name = useFormInput('');
 	const address = useFormInput('');
@@ -52,10 +57,12 @@ function App() {
 					/>
 				</CustomForm>
 				<CustomForm id="education" title="Education">
-					<AddButton desc="Add Education" />
+					{[...Array(educationCount)].map((_, i) => <EducationalForm key={i} />)}
+					<AddButton desc="Add Education" onClick={() => setEducationCount(educationCount + 1)} />
 				</CustomForm>
 				<CustomForm id="experience" title="Experience">
-					<AddButton desc="Add Experience" />
+					{[...Array(experienceCount)].map((_, i) => <ExperienceForm key={i} />)}
+					<AddButton desc="Add Experience" onClick={() => setExperienceCount(experienceCount + 1)} />
 				</CustomForm>
 			</div>
 			<Resume>
